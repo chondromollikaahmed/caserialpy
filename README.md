@@ -2,6 +2,11 @@
 
 
 
+## Installation
+
+Use the Arduino IDE 
+
+
 
 ```cpp
 SerailCom serialData (1,1)
