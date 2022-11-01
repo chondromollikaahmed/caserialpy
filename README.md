@@ -1,5 +1,5 @@
-#serial commucation between arduino and python 
+# serial commucation between arduino and python 
 
-'''c++
+''' c++
 SerailCom serialData (1,1)
 '''
