@@ -1,5 +1,4 @@
 
-
 #include "caserial.h"
 
 SerialCom::SerialCom(int _numOfValsReceived, int _digitsPerValReceived) {
@@ -38,17 +37,17 @@ void SerialCom::Get(int* valsRec)
     }
     if (_counterStart) {
       if (_counter < _stringLength) {
-        _receivedString = String(_receivedString + c);
+        _receivedStr = String(_receivedStr + c);
         _counter++;
       }
 
       if (_counter >= _stringLength) {
-        for (int i = 0; i < _numOfValsRec; i++)
+        for (int i = 0; i < _numOfValsReceived; i++)
         {
-          int num = (i * _digitsPerValRec) + 1;
-          valsRec[i] = _receivedString.substring(num, num + _digitsPerValRec).toInt();
+          int num = (i * _digitsPerValReceived) + 1;
+          valsRec[i] = _receivedStr.substring(num, num + _digitsPerValReceived).toInt();
         }
-        _receivedString = "";
+        _receivedStr = "";
         _counter = 0;
         _counterStart = false;
       }
